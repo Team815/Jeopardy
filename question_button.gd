@@ -2,11 +2,14 @@ extends Button
 class_name QuestionButton
 
 
-var question : Question
-var points : int:
+var id : int
+var question : Question:
 	set(value):
-		text = str(value)
+		question = value
+		text = str(question.points)
 
 
 func _on_pressed():
-	print(str(question.question, "\n", question.answer))
+	Globals.question = question
+	Globals.questions_asked.append(id)
+	get_tree().change_scene_to_file("res://question_selection.tscn")

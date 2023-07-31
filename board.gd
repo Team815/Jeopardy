@@ -15,7 +15,10 @@ func _ready():
 			var question : Question = Question.new()
 			question.question = question_answer.Question
 			question.answer = question_answer.Answer
+			question.points = (col + 1) * 100
 			var button : QuestionButton = preload("res://question_button.tscn").instantiate()
+			button.id = col * categories.size() + row
 			button.question = question
-			button.points = (col + 1) * 100
+			if Globals.questions_asked.has(button.id):
+				button.disabled = true
 			add_child(button)
