@@ -2,8 +2,8 @@ extends Button
 class_name QuestionButton
 
 
-var id : int
-var question : Question:
+var id: int
+var question: Question:
 	set(value):
 		question = value
 		text = str(question.points)

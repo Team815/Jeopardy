@@ -2,5 +2,12 @@
 
 [ext_resource type="Script" path="res://board.gd" id="1_73sct"]
 
-[node name="Board" type="GridContainer"]
+[node name="VBoxContainer" type="VBoxContainer"]
+
+[node name="Players" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Board" type="GridContainer" parent="."]
+layout_mode = 2
 script = ExtResource("1_73sct")
