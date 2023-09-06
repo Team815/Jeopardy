@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://buul20cvjlw4n"]
+
+[ext_resource type="Script" path="res://setup.gd" id="1_g6ctb"]
+[ext_resource type="PackedScene" uid="uid://31ian8g33hfk" path="res://new_player.tscn" id="1_okeip"]
+
+[node name="Setup" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_g6ctb")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+text = "Jeopardy!"
+
+[node name="AddPlayer" type="Button" parent="."]
+layout_mode = 2
+text = "Add Player"
+
+[node name="Players" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NewPlayer" parent="Players" instance=ExtResource("1_okeip")]
+layout_mode = 2
+
+[node name="NewPlayer2" parent="Players" instance=ExtResource("1_okeip")]
+layout_mode = 2
+
+[node name="NewPlayer3" parent="Players" instance=ExtResource("1_okeip")]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 2
+text = "Start"
+
+[connection signal="pressed" from="AddPlayer" to="." method="_on_add_player_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
