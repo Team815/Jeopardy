@@ -21,8 +21,31 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 
+[node name="AnswerQueue" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AnswerAttempt" type="HBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Answerer" type="Label" parent="VBoxContainer/AnswerAttempt"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Right" type="Button" parent="VBoxContainer/AnswerAttempt"]
+layout_mode = 2
+text = "Right"
+
+[node name="Wrong" type="Button" parent="VBoxContainer/AnswerAttempt"]
+layout_mode = 2
+text = "Wrong"
+
 [node name="Return" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Return"
+text = "No Answer"
 
+[connection signal="pressed" from="VBoxContainer/AnswerAttempt/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="VBoxContainer/AnswerAttempt/Wrong" to="." method="_on_wrong_pressed"]
 [connection signal="pressed" from="VBoxContainer/Return" to="." method="_on_return_pressed"]

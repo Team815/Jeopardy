@@ -21,10 +21,8 @@ func _ready():
 	for col in categories[0].Questions.size():
 		for row in categories.size():
 			var question_answer: Dictionary = categories[row].Questions[col]
-			var question: Question = Question.new()
-			question.question = question_answer.Question
-			question.answer = question_answer.Answer
-			question.points = (col + 1) * 100
+			var question: Question = Question.create(
+				question_answer.Question, question_answer.Answer, (col + 1) * 100)
 			var button: QuestionButton = preload("res://question_button.tscn").instantiate()
 			button.id = col * categories.size() + row
 			button.question = question

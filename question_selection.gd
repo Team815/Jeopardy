@@ -1,10 +1,51 @@
 extends MarginContainer
 
 
+var answerer_queue: Array = []
+var answerer_index: int = 0
+
+
 func _ready():
 	%Question.text = Globals.question.question
 	%Answer.text = Globals.question.answer
 
 
+func _input(event):
+	if event.is_action_pressed("answer"):
+		_add_player_to_queue(Globals.players[event.device])
+
+
 func _on_return_pressed():
+	for i in range(answerer_index):
+		answerer_queue[i].score -= Globals.question.points
 	get_tree().change_scene_to_file("res://board.tscn")
+
+
+func _add_player_to_queue(player: Player):
+	if answerer_queue.has(player):
+		return
+	answerer_queue.append(player)
+	if answerer_queue.size() - 1 == answerer_index:
+		%AnswerAttempt.show()
+		%Answerer.text = str(player.name, " answering...")
+	else:
+		var label: Label = Label.new()
+		label.text = player.name
+		%AnswerQueue.add_child(label)
+		%AnswerQueue.move_child(label, 0)
+
+
+func _on_right_pressed():
+	answerer_queue[answerer_index].score += Globals.question.points
+	_on_return_pressed()
+
+
+func _on_wrong_pressed():
+	answerer_index += 1
+	if answerer_index == answerer_queue.size():
+		%AnswerAttempt.hide()
+	else:
+		%Answerer.text = str(answerer_queue[answerer_index].name, " answering...")
+		var to_remove: Node = %AnswerQueue.get_child(%AnswerQueue.get_child_count() - 1)
+		%AnswerQueue.remove_child(to_remove)
+		to_remove.queue_free()
