@@ -16,40 +16,77 @@ layout_mode = 2
 [node name="Question" type="Label" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 6
+horizontal_alignment = 1
 
-[node name="Answer" type="Label" parent="VBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Answer" type="Label" parent="VBoxContainer/Control"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 6
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AnswerQueue" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="AnswerQueue" type="VBoxContainer" parent="VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="AnswerAttempt" type="HBoxContainer" parent="VBoxContainer"]
+[node name="AnswerAttempt" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="Answerer" type="Label" parent="VBoxContainer/AnswerAttempt"]
+[node name="Answerer" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/AnswerAttempt"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Answering" type="Label" parent="VBoxContainer/AnswerAttempt"]
+[node name="Answering" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/AnswerAttempt"]
 layout_mode = 2
 text = "answering..."
 
-[node name="Right" type="Button" parent="VBoxContainer/AnswerAttempt"]
+[node name="Right" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/AnswerAttempt"]
 layout_mode = 2
 text = "Right"
 
-[node name="Wrong" type="Button" parent="VBoxContainer/AnswerAttempt"]
+[node name="Wrong" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/AnswerAttempt"]
 layout_mode = 2
 text = "Wrong"
 
-[node name="Return" type="Button" parent="VBoxContainer"]
+[node name="Return" type="Button" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "No Answer"
 
-[connection signal="pressed" from="VBoxContainer/AnswerAttempt/Right" to="." method="_on_right_pressed"]
-[connection signal="pressed" from="VBoxContainer/AnswerAttempt/Wrong" to="." method="_on_wrong_pressed"]
-[connection signal="pressed" from="VBoxContainer/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/AnswerAttempt/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/AnswerAttempt/Wrong" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Return" to="." method="_on_return_pressed"]

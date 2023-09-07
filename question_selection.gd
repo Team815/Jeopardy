@@ -13,6 +13,8 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("answer"):
 		_add_player_to_queue(Globals.players[event.device])
+	elif event.is_action_pressed("reveal_answer"):
+		%Answer.show()
 
 
 func _on_return_pressed():
