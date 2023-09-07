@@ -27,10 +27,12 @@ func _add_player_to_queue(player: Player):
 	answerer_queue.append(player)
 	if answerer_queue.size() - 1 == answerer_index:
 		%AnswerAttempt.show()
-		%Answerer.text = str(player.name, " answering...")
+		%Answerer.text = player.name
+		%Answerer.add_theme_color_override("font_color", player.color)
 	else:
 		var label: Label = Label.new()
 		label.text = player.name
+		label.add_theme_color_override("font_color", player.color)
 		%AnswerQueue.add_child(label)
 		%AnswerQueue.move_child(label, 0)
 
@@ -45,7 +47,9 @@ func _on_wrong_pressed():
 	if answerer_index == answerer_queue.size():
 		%AnswerAttempt.hide()
 	else:
-		%Answerer.text = str(answerer_queue[answerer_index].name, " answering...")
+		var answerer: Player = answerer_queue[answerer_index]
+		%Answerer.text = answerer.name
+		%Answerer.add_theme_color_override("font_color", answerer.color)
 		var to_remove: Node = %AnswerQueue.get_child(%AnswerQueue.get_child_count() - 1)
 		%AnswerQueue.remove_child(to_remove)
 		to_remove.queue_free()

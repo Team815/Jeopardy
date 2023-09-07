@@ -9,9 +9,15 @@ script = ExtResource("1_wfbr8")
 
 [node name="Delete" type="Button" parent="."]
 layout_mode = 2
+focus_mode = 1
 text = "X"
 
 [node name="Name" type="LineEdit" parent="."]
 layout_mode = 2
+focus_mode = 1
+
+[node name="Color" type="Label" parent="."]
+layout_mode = 2
+text = "Color 1"
 
 [connection signal="pressed" from="Delete" to="." method="_on_delete_pressed"]
