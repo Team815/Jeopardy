@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://1k45fj4iabbp"]
+
+[ext_resource type="Script" path="res://player_display.gd" id="1_aadmk"]
+
+[node name="PlayerDisplay" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+script = ExtResource("1_aadmk")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 2
+horizontal_alignment = 1

@@ -3,13 +3,8 @@ extends GridContainer
 
 func _ready():
 	for player in Globals.players:
-		var display: VBoxContainer = VBoxContainer.new()
-		var label: Label = Label.new()
-		label.text = player.name
-		display.add_child(label)
-		label = Label.new()
-		label.text = str(player.score)
-		display.add_child(label)
+		var display: PlayerDisplay = preload("res://player_display.tscn").instantiate()
+		display.setup(player)
 		%Players.add_child(display)
 	var json: String = FileAccess.get_file_as_string("questions.json")
 	var categories: Array = JSON.parse_string(json)
@@ -17,6 +12,7 @@ func _ready():
 	for row in categories.size():
 		var label: Label = Label.new()
 		label.text = categories[row].Category
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		add_child(label)
 	for col in categories[0].Questions.size():
 		for row in categories.size():
