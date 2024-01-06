@@ -30,6 +30,9 @@ layout_mode = 2
 [node name="NewPlayer3" parent="Players" instance=ExtResource("1_okeip")]
 layout_mode = 2
 
+[node name="NewPlayer4" parent="Players" instance=ExtResource("1_okeip")]
+layout_mode = 2
+
 [node name="Start" type="Button" parent="."]
 layout_mode = 2
 focus_mode = 1

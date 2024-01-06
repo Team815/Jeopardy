@@ -5,5 +5,6 @@ var questions_asked: Array = []
 var players: Array = [
 	Player.create("Alice", Color.WHITE),
 	Player.create("Bob", Color.AQUA),
-	Player.create("Charlie", Color.GREEN)
+	Player.create("Charlie", Color.GREEN),
+	Player.create("David", Color.HOT_PINK)
 ]
