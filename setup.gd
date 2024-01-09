@@ -8,12 +8,12 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("next"):
-		if event.device >= $Players.get_child_count():
+		if event.device >= %Players.get_child_count():
 			return
 		var new_player: NewPlayer = %Players.get_child(event.device)
 		new_player.next_color()
 	elif event.is_action_pressed("previous"):
-		if event.device >= $Players.get_child_count():
+		if event.device >= %Players.get_child_count():
 			return
 		var new_player: NewPlayer = %Players.get_child(event.device)
 		new_player.previous_color()

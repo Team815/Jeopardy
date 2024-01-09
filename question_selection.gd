@@ -18,8 +18,10 @@ func _input(event):
 
 
 func _on_return_pressed():
-	for i in range(answerer_index):
-		answerer_queue[i].score -= Globals.question.points
+	for i in answerer_index:
+		var player = answerer_queue[i]
+		player.previous_score = player.score
+		player.score -= Globals.question.points
 	get_tree().change_scene_to_file("res://board.tscn")
 
 
@@ -40,7 +42,9 @@ func _add_player_to_queue(player: Player):
 
 
 func _on_right_pressed():
-	answerer_queue[answerer_index].score += Globals.question.points
+	var player = answerer_queue[answerer_index]
+	player.previous_score = player.score
+	player.score += Globals.question.points
 	_on_return_pressed()
 
 

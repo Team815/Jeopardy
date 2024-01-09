@@ -4,8 +4,8 @@ extends GridContainer
 func _ready():
 	for player in Globals.players:
 		var display: PlayerDisplay = preload("res://player_display.tscn").instantiate()
-		display.setup(player)
 		%Players.add_child(display)
+		display.setup(player)
 	var json: String = FileAccess.get_file_as_string("questions.json")
 	var categories: Array = JSON.parse_string(json)
 	columns = categories.size()

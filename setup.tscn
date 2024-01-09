@@ -1,42 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://buul20cvjlw4n"]
+[gd_scene load_steps=4 format=3 uid="uid://buul20cvjlw4n"]
 
 [ext_resource type="Script" path="res://setup.gd" id="1_g6ctb"]
 [ext_resource type="PackedScene" uid="uid://31ian8g33hfk" path="res://new_player.tscn" id="1_okeip"]
 
+[sub_resource type="Theme" id="Theme_wdepl"]
+default_font_size = 24
+
 [node name="Setup" type="VBoxContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+alignment = 1
 script = ExtResource("1_g6ctb")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "Jeopardy!"
+horizontal_alignment = 1
 
-[node name="AddPlayer" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+theme = SubResource("Theme_wdepl")
+
+[node name="AddPlayer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 focus_mode = 1
 text = "Add Player"
 
-[node name="Players" type="VBoxContainer" parent="."]
+[node name="Players" type="VBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
 
-[node name="NewPlayer" parent="Players" instance=ExtResource("1_okeip")]
+[node name="NewPlayer" parent="VBoxContainer/Players" instance=ExtResource("1_okeip")]
 layout_mode = 2
 
-[node name="NewPlayer2" parent="Players" instance=ExtResource("1_okeip")]
+[node name="NewPlayer2" parent="VBoxContainer/Players" instance=ExtResource("1_okeip")]
 layout_mode = 2
 
-[node name="NewPlayer3" parent="Players" instance=ExtResource("1_okeip")]
+[node name="NewPlayer3" parent="VBoxContainer/Players" instance=ExtResource("1_okeip")]
 layout_mode = 2
 
-[node name="NewPlayer4" parent="Players" instance=ExtResource("1_okeip")]
+[node name="NewPlayer4" parent="VBoxContainer/Players" instance=ExtResource("1_okeip")]
 layout_mode = 2
 
-[node name="Start" type="Button" parent="."]
+[node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 focus_mode = 1
 text = "Start"
 
-[connection signal="pressed" from="AddPlayer" to="." method="_on_add_player_pressed"]
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddPlayer" to="." method="_on_add_player_pressed"]
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

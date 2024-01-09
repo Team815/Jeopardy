@@ -1,131 +1,131 @@
 [
     {
-        "Category": "Category 1",
+        "Category": "Arena",
         "Questions":
         [
             {
-                "Question": "Category 1, Question 1",
-                "Answer": "Category 1, Answer 1"
+                "Question": "The field the populated with four game elements per alliance. Name three of them.",
+                "Answer": "Amp\nSpeaker\nSource\nStage"
             },
             {
-                "Question": "Category 1, Question 2",
-                "Answer": "Category 1, Answer 2"
+                "Question": "What is the source used for?",
+                "Answer": "Feeding notes into the field"
             },
             {
-                "Question": "Category 1, Question 3",
-                "Answer": "Category 1, Answer 3"
+                "Question": "The speaker's subwoofer lights are on. What does this indicate?",
+                "Answer": "The speaker is amplified"
             },
             {
-                "Question": "Category 1, Question 4",
-                "Answer": "Category 1, Answer 4"
+                "Question": "How many traps are on the field?",
+                "Answer": "6 traps, 3 per stage"
             },
             {
-                "Question": "Category 1, Question 5",
-                "Answer": "Category 1, Answer 5"
+                "Question": "The amp's coopertition light is blinking. What does this indicate?",
+                "Answer": "It's auto or the initial 45 seconds of teleop and the alliance has not used a note for coopertition"
             }
         ]
     },
     {
-        "Category": "Category 2",
+        "Category": "Robot Construction",
         "Questions":
         [
             {
-                "Question": "Category 2, Question 1",
-                "Answer": "Category 2, Answer 1"
+                "Question": "What is the maximum weight of a robot?",
+                "Answer": "125 lb"
             },
             {
-                "Question": "Category 2, Question 2",
-                "Answer": "Category 2, Answer 2"
+                "Question": "What is a robot's maximum frame perimeter?",
+                "Answer": "120 in"
             },
             {
-                "Question": "Category 2, Question 3",
-                "Answer": "Category 2, Answer 3"
+                "Question": "What is a robot's maximum height?",
+                "Answer": "4 ft"
             },
             {
-                "Question": "Category 2, Question 4",
-                "Answer": "Category 2, Answer 4"
+                "Question": "What is the maximum length allowed to extend past a robot's frame perimeter?",
+                "Answer": "12 in"
             },
             {
-                "Question": "Category 2, Question 5",
-                "Answer": "Category 2, Answer 5"
+                "Question": "What is the maximum number of propulsion motors allowed on a robot?",
+                "Answer": "4 motors"
             }
         ]
     },
     {
-        "Category": "Category 3",
+        "Category": "Scoring",
         "Questions":
         [
             {
-                "Question": "Category 3, Question 1",
-                "Answer": "Category 3, Answer 1"
+                "Question": "How many points does an amp note earn in both auto and teleop?",
+                "Answer": "Auto: 2 points\nTeleop: 1 point"
             },
             {
-                "Question": "Category 3, Question 2",
-                "Answer": "Category 3, Answer 2"
+                "Question": "Notes can earn 5 point three different ways. Name two of them.",
+                "Answer": "Speaker note during autonomous\nSpeaker note when amplified\nTrap note"
             },
             {
-                "Question": "Category 3, Question 3",
-                "Answer": "Category 3, Answer 3"
+                "Question": "How is the ensemble ranking point earned?",
+                "Answer": "At least 10 stage points and at least 2 onstage robots"
             },
             {
-                "Question": "Category 3, Question 4",
-                "Answer": "Category 3, Answer 4"
+                "Question": "What is the match advantage of earning the coopertition bonus?",
+                "Answer": "Only 15 amp and speaker notes are needed instead of 18 to earn the melody ranking point"
             },
             {
-                "Question": "Category 3, Question 5",
-                "Answer": "Category 3, Answer 5"
+                "Question": "A robot consists of just a chassis (wheels) and nothing else. How many points can it possibly score on its own in a match?",
+                "Answer": "3 points:\n2 points for leaving the robot starting zone in auto,\n1 point for parking in the stage zone at the end of the match"
             }
         ]
     },
     {
-        "Category": "Category 4",
+        "Category": "Match Play",
         "Questions":
         [
             {
-                "Question": "Category 4, Question 1",
-                "Answer": "Category 4, Answer 1"
+                "Question": "What is the maximum number of notes a robot may control at once?",
+                "Answer": "1 note"
             },
             {
-                "Question": "Category 4, Question 2",
-                "Answer": "Category 4, Answer 2"
+                "Question": "When can a human player throw high notes onto the field?",
+                "Answer": "During the last 20 seconds of the match"
             },
             {
-                "Question": "Category 4, Question 3",
-                "Answer": "Category 4, Answer 3"
+                "Question": "What is the maximum amount of time a robot may pin an opponent's robot?",
+                "Answer": "5 seconds"
             },
             {
-                "Question": "Category 4, Question 4",
-                "Answer": "Category 4, Answer 4"
+                "Question": "What does a tech foul entail?",
+                "Answer": "5 points to the opponent alliance"
             },
             {
-                "Question": "Category 4, Question 5",
-                "Answer": "Category 4, Answer 5"
+                "Question": "At the beginning of a match, what is the maximum number of notes on the field?",
+                "Answer": "17 notes:\n5 notes on the center line\n6 notes on the wings\n6 notes loaded in robots"
             }
         ]
     },
     {
-        "Category": "Category 5",
+        "Category": " ̶͉̗̺͐̆̿ͅ ̵̪̃̾̈́̋ ̵̪̰̀̚ ̵̧̯̓̓̏͘ ̵̣͊̆̓ ̷̡̻̓ ̴̟̘͇͝ ̵̢̼̲̲͋̊ ̵̩̝̹͘͜͝ ̸̭͎̞̳̀̃̋̚ ̷̺͍̊̊̕ ̷̩̭̜̊̆̄̚ ̸̫̱̾͂͑͛ ̶͍̝̿̓͐ ̸̦̪̐̅̌̔ ̵̥̓̀̕ ̵̬̎͌́̃ ̵̤͐ͅͅ",
         "Questions":
         [
             {
-                "Question": "Category 5, Question 1",
-                "Answer": "Category 5, Answer 1"
+                "Question": "What must be worn around the playing field and in the pit area?",
+                "Answer": "Safety glasses"
             },
             {
-                "Question": "Category 5, Question 2",
-                "Answer": "Category 5, Answer 2"
+                "Question": "What does FIRST stand for?",
+                "Answer": "For Inspiration and Recognition of Science and Technology"
             },
             {
-                "Question": "Category 5, Question 3",
-                "Answer": "Category 5, Answer 3"
+                "Question": "A human player throws a high note onto a microphone. What advantage does this provide?",
+                "Answer": "Onstage robots under the microphone are spotlit and score more points (4 instead of 3)"
             },
             {
-                "Question": "Category 5, Question 4",
-                "Answer": "Category 5, Answer 4"
+                "Question": "If two teams have the same number of ranking points, what is the next criteria used to rank them?",
+                "Answer": "Coopertition bonus points"
             },
             {
-                "Question": "Category 5, Question 5",
-                "Answer": "Category 5, Answer 5"
+                "Question": "What is the maximum amount of stage points an alliance can earn?",
+                "Answer": "31 points:\n5 + 5 + 5 trap points\n4 + 4 + 4 onstage spotlit points\n2 + 2 harmony points"
             }
         ]
     }
