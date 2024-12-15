@@ -29,6 +29,7 @@ func _on_start_pressed():
 
 func _on_add_player_pressed():
 	var new_player = preload("res://new_player.tscn").instantiate()
+	new_player.connect("delete", _on_new_player_deleted)
 	%Players.add_child(new_player)
 
 
