@@ -6,6 +6,7 @@ func _ready():
 		var display: PlayerDisplay = preload("res://player_display.tscn").instantiate()
 		%Players.add_child(display)
 		display.setup(player)
+		player.previous_score = player.score
 	var json: String = FileAccess.get_file_as_string("questions.json")
 	var categories: Array = JSON.parse_string(json)
 	columns = categories.size()
