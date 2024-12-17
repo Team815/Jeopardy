@@ -16,6 +16,7 @@ func _ready():
 		var label: Label = Label.new()
 		label.text = categories[row].Category
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD
 		add_child(label)
 	for col in categories[0].Questions.size():
 		for row in categories.size():

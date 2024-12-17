@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://question_selection.gd" id="1_j8ijk"]
 
 [sub_resource type="Theme" id="Theme_rgg4u"]
-default_font_size = 24
+default_font_size = 48
 
 [node name="QuestionSelection" type="MarginContainer"]
 anchors_preset = 15
